@@ -373,6 +373,13 @@ for (const nome of fontes) {
     : path.join(DESTINO, nome);
 
   fs.writeFileSync(destino, saida, 'utf8');
+
+  /* A pagina 404 tambem vai para a raiz do site: e de la que a
+     hospedagem estatica a procura quando um endereco nao existe. */
+  if (nome === '404.html') {
+    fs.writeFileSync(path.join(RAIZ, 'frontend', '404.html'), saida, 'utf8');
+  }
+
   geradas += 1;
   console.log(`  ok ${path.relative(RAIZ, destino)}`);
 }

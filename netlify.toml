@@ -13,7 +13,7 @@
 # As fontes das paginas nao devem ser publicadas.
 [[redirects]]
   from = "/pages/src/*"
-  to = "/404.html"
+  to = "/pages/404.html"
   status = 404
 
 # O painel e local: nao precisa aparecer nos buscadores.

@@ -240,9 +240,23 @@ h1, h2, h3, h4 { line-height: 1.2; letter-spacing: -0.3px; }
 .video-wrap { position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-md); }
 .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
+/* ---- Pagina 404 ---------------------------------------------------------- */
+.pagina-erro {
+  max-width: 620px; margin: 0 auto; padding: 90px 24px 110px; text-align: center;
+}
+.pagina-erro .codigo-erro {
+  font-size: 76px; font-weight: 900; line-height: 1;
+  color: var(--accent); letter-spacing: -3px; margin-bottom: 12px;
+}
+.pagina-erro h1 { font-size: 26px; font-weight: 800; margin-bottom: 12px; }
+.pagina-erro .texto-erro { color: var(--text-secondary); font-size: 15px; margin-bottom: 28px; }
+.pagina-erro .botoes-erro { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
 @media (max-width: 768px) {
   .form-row { grid-template-columns: 1fr; }
   .container { padding: 0 16px; }
   .container-largo, .section-inner { padding: 0 16px; }
   .section { padding: 40px 16px; }
+  .pagina-erro { padding: 60px 16px 80px; }
+  .pagina-erro .codigo-erro { font-size: 56px; }
 }
