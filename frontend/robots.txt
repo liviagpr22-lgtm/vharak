@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /pages/admin/
+
+Sitemap: https://vharak.com.br/sitemap.xml

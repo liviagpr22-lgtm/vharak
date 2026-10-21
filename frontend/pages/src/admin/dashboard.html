@@ -1,0 +1,33 @@
+<!-- titulo: Painel   -->
+<!-- descricao: Visao geral do catálogo e dos pedidos da VHARAK.   -->
+<!-- ativo: painel -->
+<!-- css: global, admin -->
+
+<div class="admin-topo">
+  <div>
+    <h1>Painel</h1>
+    <p>Como o catálogo e estático, estes números são os do catálogo e os guardados neste navegador.</p>
+  </div>
+  <a class="btn btn-secondary btn-sm" href="/">Ver a loja</a>
+</div>
+
+<div class="indicadores" id="indicadores"></div>
+
+<div class="painel">
+  <div class="painel-topo">
+    <h2>Como publicar alterações</h2>
+  </div>
+  <div style="padding:22px;color:var(--text-secondary);font-size:14px;line-height:1.8">
+    <p style="margin-bottom:12px">
+      Os preços editados no painel ficam guardados neste navegador. Para coloca-los no ar:
+    </p>
+    <p style="margin-bottom:12px">
+      1. Em <strong>Produtos e preços</strong>, clique em <strong>Exportar preços.js</strong>.<br>
+      2. Substitua o arquivo baixado em <strong>frontend/js/preços.js</strong>.<br>
+      3. Recarregue a loja: os preços aparecem no catálogo, nos cards e no detalhe.
+    </p>
+    <p>
+      Quando a API do backend for ligada, o painel passa a gravar direto no banco e essa etapa deixa de ser necessária.
+    </p>
+  </div>
+</div>

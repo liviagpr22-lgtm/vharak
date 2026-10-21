@@ -1,0 +1,52 @@
+<!-- titulo: Criar conta | VHARAK   -->
+<!-- descricao: Crie sua conta na VHARAK para acompanhar pedidos e comprar jogos e consoles com mais facilidade.   -->
+<!-- ativo: inicio -->
+<!-- css: global, header, footer, auth -->
+<!-- js: auth-page -->
+
+<main class="main-content">
+  <div class="auth">
+    <div class="auth-caixa">
+
+      <div class="auth-logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 6H3C1.9 6 1 6.9 1 8v8c0 1.1.9 2 2 2h3l2-2h8l2 2h3c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-8 3.5h-2V12H9.5v-2.5h-2v-2h2V5h2v2.5h2v2zM17.5 12c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5S18.33 12 17.5 12zm3 0c-.83 0-1.5-.67-1.5-1.5S19.67 9 20.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+        <span><span class="marca-a">V</span><span class="marca-b">HARAK</span></span>
+      </div>
+
+      <h1>Criar conta</h1>
+      <p class="subtitulo">Leva menos de um minuto.</p>
+
+      <form id="formulario-cadastro" novalidate>
+        <div class="form-group">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" autocomplete="name" required placeholder="Como no seu documento">
+        </div>
+
+        <div class="form-group">
+          <label for="email-cadastro">E-mail</label>
+          <input type="email" id="email-cadastro" name="email" autocomplete="email" required placeholder="você@email.com">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="senha-cadastro">Senha</label>
+            <input type="password" id="senha-cadastro" name="senha" autocomplete="new-password" required minlength="4" placeholder="Minimo de 4 caracteres">
+          </div>
+          <div class="form-group">
+            <label for="confirmar-senha">Repetir senha</label>
+            <input type="password" id="confirmar-senha" name="confirmar" autocomplete="new-password" required placeholder="Repita a senha">
+          </div>
+        </div>
+
+        <p class="form-error" id="erro-cadastro" hidden></p>
+
+        <button class="btn btn-primary btn-lg" type="submit">Criar conta</button>
+      </form>
+
+      <div class="auth-rodape">
+        Ja tem conta? <a href="/pages/login.html">Entrar</a>
+      </div>
+
+    </div>
+  </div>
+</main>

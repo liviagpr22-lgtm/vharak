@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800" role="img"
+    aria-label="Capa ilustrativa de Death Stranding">
+    <defs>
+        <linearGradient id="fundo" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#1D1512"/>
+            <stop offset="1" stop-color="#0A0908"/>
+        </linearGradient>
+        <radialGradient id="holofote" cx="48%" cy="38%" r="62%">
+            <stop offset="0" stop-color="#E0B34A" stop-opacity=".24"/>
+            <stop offset="1" stop-color="#E0B34A" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="sangue" cx="52%" cy="88%" r="50%">
+            <stop offset="0" stop-color="#C8324A" stop-opacity=".20"/>
+            <stop offset="1" stop-color="#C8324A" stop-opacity="0"/>
+        </radialGradient>
+        <pattern id="runas" width="30" height="30" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <path d="M0 15h30M15 0v30" stroke="#E0B34A" stroke-opacity=".08" stroke-width="1"/>
+        </pattern>
+    </defs>
+    <rect width="600" height="800" fill="url(#fundo)"/>
+    <rect width="600" height="800" fill="url(#runas)"/>
+    <rect width="600" height="800" fill="url(#holofote)"/>
+    <rect width="600" height="800" fill="url(#sangue)"/>
+    <rect x="22" y="22" width="556" height="756" fill="none" stroke="#A97B21" stroke-opacity=".45" stroke-width="2"/>
+    <path d="M300 228l15 15-15 15-15-15z" fill="#E0B34A" fill-opacity=".85"/>
+    <text x="300" y="170" text-anchor="middle" font-family="Bahnschrift, 'Segoe UI', Arial, sans-serif"
+        font-size="21" font-weight="700" letter-spacing="6" fill="#C9C0AE">PLAYSTATION</text>
+        <text x="300" y="470" text-anchor="middle"
+            font-family="Bahnschrift, 'Segoe UI Semibold', 'Segoe UI', Arial, sans-serif"
+            font-size="50" font-weight="700" letter-spacing="1" fill="#F7F3EA">DEATH STRANDING</text>
+    <rect x="252" y="523" width="96" height="2" fill="#E0B34A" fill-opacity=".7"/>
+    <text x="56" y="712" font-family="Bahnschrift, 'Segoe UI', Arial, sans-serif" font-size="19"
+        font-weight="700" letter-spacing="3" fill="#968C79">AÇÃO E AVENTURA</text>
+    <g>
+        <rect x="486" y="656" width="58" height="58" fill="#C8324A" stroke="#A97B21" stroke-opacity=".6"/>
+        <text x="515" y="697" text-anchor="middle" font-family="Bahnschrift, 'Segoe UI', Arial, sans-serif"
+            font-size="30" font-weight="700" fill="#FDF8EE">16</text>
+    </g>
+    <text x="300" y="762" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="14"
+        letter-spacing="3" fill="#6E6656">CAPA ILUSTRATIVA</text>
+</svg>

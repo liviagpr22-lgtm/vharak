@@ -1,0 +1,174 @@
+<!-- titulo: VHARAK | Jogos, consoles e acessórios   -->
+<!-- descricao: Loja de jogos e consoles: 105 títulos e 23 consoles de PlayStation, Xbox e Nintendo. Peças físicas e digitais, com atendimento pelo WhatsApp.   -->
+<!-- ativo: inicio -->
+<!-- css: global, header, footer, product-card, home -->
+<!-- js: home -->
+
+<main class="main-content">
+<section class="hero">
+    <div class="hero-content">
+      <div class="hero-logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 6H3C1.9 6 1 6.9 1 8v8c0 1.1.9 2 2 2h3l2-2h8l2 2h3c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-8 3.5h-2V12H9.5v-2.5h-2v-2h2V5h2v2.5h2v2zM17.5 12c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5S18.33 12 17.5 12zm3 0c-.83 0-1.5-.67-1.5-1.5S19.67 9 20.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+        <span><span class="marca-a">V</span><span class="marca-b">HARAK</span></span>
+      </div>
+      <p class="hero-tagline">Jogos, consoles e acessórios para todo jogador.</p>
+      <p class="hero-sub">105 títulos e 23 consoles. Físico e digital.</p>
+
+      <form class="hero-search" id="busca-hero" role="search">
+        <label class="visualmente-oculto" for="busca-hero-campo">Buscar jogos, consoles ou gêneros</label>
+        <input type="search" id="busca-hero-campo" name="q" placeholder="Buscar por título, gênero ou plataforma..." autocomplete="off">
+        <button type="submit">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          Buscar
+        </button>
+      </form>
+
+      <div class="hero-links">
+        <a class="btn btn-primary" href="/pages/catalogo.html">Ver o catálogo</a>
+        <a class="btn btn-whatsapp" data-zap data-zap-mensagem="Olá! Quero comprar na VHARAK." href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.83 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.8-.78.97-.15.16-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.13.17 1.74 2.65 4.21 3.71.59.26 1.05.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Destaques</h2>
+          <p class="section-sub">O que a equipe indica</p>
+        </div>
+        <a class="see-all" href="/pages/catalogo.html">Ver todos</a>
+      </div>
+      <div class="grid-produtos" id="faixa-destaques"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Lançamentos</h2>
+          <p class="section-sub">Chegaram recém</p>
+        </div>
+        <a class="see-all" href="/pages/catalogo.html?ordenar=novidades">Ver todos</a>
+      </div>
+      <div class="grid-produtos" id="faixa-novidades"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2 class="section-title">Mais vendidos</h2>
+        <a class="see-all" href="/pages/catalogo.html?ordenar=vendidos">Ver todos</a>
+      </div>
+      <div class="grid-produtos" id="faixa-vendidos"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Top 10 da semana</h2>
+          <p class="section-sub">Os títulos mais procurados</p>
+        </div>
+        <a class="see-all" href="/pages/catalogo.html?ordenar=vendidos">Ver todos</a>
+      </div>
+      <div class="top10" id="faixa-top10"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Jogos populares</h2>
+          <p class="section-sub">O que mais sai da prateleira</p>
+        </div>
+        <a class="see-all" href="/pages/catalogo.html?tipo=jogo">Ver todos</a>
+      </div>
+      <div class="grid-produtos" id="faixa-jogos"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Consoles e handhelds</h2>
+          <p class="section-sub">Da 3a a 9a geração</p>
+        </div>
+        <a class="see-all" href="/pages/consoles.html">Ver todos</a>
+      </div>
+      <div class="grid-produtos" id="faixa-consoles"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2 class="section-title">Ação e aventura</h2>
+        <a class="see-all" href="/pages/catalogo.html?genero=acao">Ver todos</a>
+      </div>
+      <div class="grid-produtos" id="faixa-acao"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2 class="section-title">RPG</h2>
+        <a class="see-all" href="/pages/catalogo.html?genero=rpg">Ver todos</a>
+      </div>
+      <div class="grid-produtos" id="faixa-rpg"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2 class="section-title">Corrida</h2>
+        <a class="see-all" href="/pages/catalogo.html?genero=corrida">Ver todos</a>
+      </div>
+      <div class="grid-produtos" id="faixa-corrida"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2 class="section-title">Tiro</h2>
+        <a class="see-all" href="/pages/catalogo.html?genero=tiro">Ver todos</a>
+      </div>
+      <div class="grid-produtos" id="faixa-tiro"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <h2 class="section-title">Estrategia</h2>
+        <a class="see-all" href="/pages/catalogo.html?genero=estrategia">Ver todos</a>
+      </div>
+      <div class="grid-produtos" id="faixa-estrategia"></div>
+    </div>
+  </section>
+
+  <section class="cta-final">
+    <div class="cta-conteudo">
+      <h2>Pronto para escolher a sua?</h2>
+      <p>Fale com a gente pelo WhatsApp. A gente confirma o preço, a disponibilidade e o prazo de entrega do seu jogo ou console.</p>
+      <div class="botoes">
+        <a class="btn btn-whatsapp btn-lg" data-zap data-zap-mensagem="Olá! Quero fechar uma compra na VHARAK." href="#">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23a8.2 8.2 0 0 1 5.83 2.42 8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.8-.78.97-.15.16-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.44-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.16 0-.43.06-.65.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.13.17 1.74 2.65 4.21 3.71.59.26 1.05.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+          Falar no WhatsApp
+        </a>
+        <a class="btn btn-outline btn-lg" href="/pages/consoles.html">Ver consoles</a>
+      </div>
+    </div>
+  </section>
+</main>

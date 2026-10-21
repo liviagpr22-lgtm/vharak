@@ -1,0 +1,30 @@
+<!-- titulo: Meu perfil | VHARAK   -->
+<!-- descricao: Acompanhe seus dados e seus pedidos na VHARAK.   -->
+<!-- ativo: inicio -->
+<!-- css: global, header, footer, profile -->
+<!-- js: profile -->
+
+<main class="main-content">
+  <div class="perfil">
+
+    <div class="perfil-topo" id="perfil-cabecalho">
+      <h1>Meu perfil</h1>
+    </div>
+
+    <div class="perfil-grade">
+      <div>
+        <div class="painel" id="dados-conta"></div>
+        <div class="painel">
+          <h2>Sessão</h2>
+          <p style="color:var(--text-secondary);font-size:14px;margin-bottom:16px">
+            A conta guarda seus dados neste navegador.
+          </p>
+          <button class="btn btn-secondary btn-sm" type="button" onclick="VH.auth.sair()">Sair da conta</button>
+        </div>
+      </div>
+
+      <div id="lista-pedidos"></div>
+    </div>
+
+  </div>
+</main>

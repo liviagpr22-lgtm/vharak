@@ -1,0 +1,44 @@
+# Dependencias
+node_modules/
+.pnp
+.pnp.js
+
+# Build
+.next/
+out/
+dist/
+.nuxt/
+.output/
+*.tsbuildinfo
+next-env.d.ts
+
+# Ambiente: o .env tem senha do banco e segredo do token.
+# O modelo sem segredos fica em backend/.env.example
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+servidor.log
+servidor-erro.log
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+
+# Temporario do projeto
+frontend-antigo/
+*.tmp
+.cache/

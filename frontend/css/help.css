@@ -1,0 +1,89 @@
+/* =========================================================================
+   VHARAK | help.css
+   Central de Ajuda: categorias, cartoes de problema e o painel de
+   solucoes que abre ao clicar.
+   ========================================================================= */
+
+.ajuda { padding: 40px 24px 60px; max-width: var(--largura-nav); margin: 0 auto; }
+.ajuda-topo { margin-bottom: 28px; }
+.ajuda-topo .page-title { margin-bottom: 8px; }
+.ajuda-topo p { color: var(--text-secondary); font-size: 15px; max-width: 62ch; }
+
+.ajuda-busca { max-width: 520px; margin: 22px 0 28px; }
+.ajuda-busca input {
+  width: 100%; padding: 14px 20px; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: var(--radius-md);
+  color: var(--text-primary); font-size: 15px; transition: var(--transition);
+}
+.ajuda-busca input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-glow); }
+.ajuda-busca input::placeholder { color: var(--text-muted); }
+
+.categorias { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+.categoria {
+  padding: 8px 16px; background: var(--bg-card);
+  border: 1px solid var(--border); border-radius: 20px;
+  color: var(--text-secondary); font-size: 13px; font-weight: 500;
+  cursor: pointer; transition: var(--transition);
+}
+.categoria:hover { border-color: var(--border-light); color: var(--text-primary); }
+.categoria.active { background: var(--accent); border-color: var(--accent); color: var(--accent-texto); font-weight: 600; }
+
+/* ---- Grade de problemas ------------------------------------------------------ */
+.problemas { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+
+.problema {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 22px;
+  cursor: pointer; transition: var(--transition);
+  display: flex; flex-direction: column; text-align: left;
+}
+.problema:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+.problema .rotulo-categoria {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--accent); margin-bottom: 10px;
+}
+.problema h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+.problema p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+.problema .contagem { margin-top: 14px; font-size: 12px; color: var(--text-muted); }
+
+/* ---- Painel de solucoes ---------------------------------------------------------- */
+.solucao {
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  background: var(--bg-secondary); padding: 28px; margin-top: 20px;
+}
+.solucao-topo { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 6px; }
+.solucao-topo h3 { font-size: 20px; font-weight: 700; }
+.solucao .categoria-rotulo { font-size: 12px; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+.solucao .resumo { color: var(--text-secondary); font-size: 14px; margin-bottom: 22px; }
+
+.solucao-item { padding: 16px 0; border-bottom: 1px solid var(--border); }
+.solucao-item:last-of-type { border-bottom: none; }
+.solucao-item h4 { font-size: 15px; font-weight: 600; margin-bottom: 6px; }
+.solucao-item p { color: var(--text-secondary); font-size: 14px; line-height: 1.7; }
+
+.solucao-fim {
+  margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; flex-wrap: wrap;
+}
+.solucao-fim p { color: var(--text-secondary); font-size: 14px; }
+.solucao-fim .btn { flex-shrink: 0; }
+
+.fechar-painel {
+  background: none; color: var(--text-muted); font-size: 22px; line-height: 1;
+  padding: 4px 8px; border-radius: 4px;
+}
+.fechar-painel:hover { color: var(--text-primary); background: rgba(255, 255, 255, 0.06); }
+
+/* ---- Politicas legais ------------------------------------------------------------- */
+.legais { margin-top: 56px; padding-top: 36px; border-top: 1px solid var(--border); }
+.legais section { margin-bottom: 36px; }
+.legais h2 { font-size: 22px; font-weight: 800; margin-bottom: 12px; }
+.legais h3 { font-size: 16px; font-weight: 600; margin: 18px 0 6px; }
+.legais p { color: var(--text-secondary); font-size: 14px; line-height: 1.8; }
+
+@media (max-width: 768px) {
+  .ajuda { padding: 24px 16px 40px; }
+  .problemas { grid-template-columns: 1fr; }
+  .solucao { padding: 20px; }
+}

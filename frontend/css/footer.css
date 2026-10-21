@@ -1,0 +1,89 @@
+/* =========================================================================
+   VHARAK | footer.css
+   Rodape em tres colunas (marca / loja / conta) mais uma barra inferior
+   com links legais. Superficie escura, borda de 1px, sem gradiente.
+   ========================================================================= */
+
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 56px 0 24px;
+  margin-top: 60px;
+}
+.footer-inner { max-width: var(--largura-nav); margin: 0 auto; padding: 0 32px; }
+
+.footer-grid {
+  display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.2fr; gap: 40px;
+}
+
+.footer-brand {
+  display: flex; align-items: center; gap: 9px;
+  font-size: 22px; font-weight: 900; letter-spacing: -0.5px;
+  margin-bottom: 14px;
+}
+.footer-brand .logo-icon { width: 24px; height: 24px; color: var(--accent); }
+.footer-brand .marca-b { color: var(--accent); }
+
+.footer-about { color: var(--text-secondary); font-size: 14px; line-height: 1.7; max-width: 34ch; }
+
+.footer h4 {
+  font-size: 12px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--text-muted); margin-bottom: 16px;
+}
+.footer-links { display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { color: var(--text-secondary); font-size: 14px; transition: color 0.2s ease; }
+.footer-links a:hover { color: var(--accent); }
+
+/* ---- Bloco de contato / WhatsApp ---------------------------------------- */
+.footer-contato { display: flex; flex-direction: column; gap: 12px; }
+.footer-contato p { color: var(--text-secondary); font-size: 14px; }
+.footer-contato .telefone { color: var(--text-primary); font-weight: 600; font-size: 15px; }
+
+.footer-social { display: flex; gap: 10px; }
+.footer-social a {
+  display: flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; border-radius: 50%;
+  background: var(--bg-card); border: 1px solid var(--border);
+  color: var(--text-secondary); transition: var(--transition);
+}
+.footer-social a:hover { border-color: var(--accent); color: var(--accent); }
+.footer-social svg { width: 17px; height: 17px; }
+
+/* ---- Barra inferior ------------------------------------------------------ */
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  margin-top: 40px; padding-top: 20px;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted); font-size: 13px;
+}
+.footer-legal { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer-legal a { color: var(--text-muted); transition: color 0.2s ease; }
+.footer-legal a:hover { color: var(--text-secondary); }
+
+/* ---- Botão flutuante de WhatsApp ----------------------------------------- *
+ * No celular ele ajuda: o WhatsApp fica sempre a um toque. No desktop
+ * o header ja tem o botao, e o flutuante acabava por cima do preco do
+ * ultimo card da grade.                                                */
+.zap-flutuante {
+  position: fixed; right: 20px; bottom: 20px; z-index: 90;
+  display: none; align-items: center; gap: 10px;
+  padding: 13px 20px; border-radius: 999px;
+  background: #25d366; color: #06240f;
+  font-size: 14px; font-weight: 700;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: var(--transition);
+}
+.zap-flutuante:hover { background: #3ee57a; transform: translateY(-2px); }
+.zap-flutuante svg { width: 20px; height: 20px; }
+
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer-inner { padding: 0 16px; }
+  .zap-flutuante { display: flex; }
+}
+@media (max-width: 560px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .zap-flutuante span { display: none; }
+  .zap-flutuante { padding: 15px; }
+}

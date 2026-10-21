@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes | VHARAK Painel</title>
+  <meta name="description" content="Clientes cadastrados no navegador da loja.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+<div class="admin-layout">
+<aside class="admin-lateral">
+  <div class="admin-marca">
+    <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 6H3C1.9 6 1 6.9 1 8v8c0 1.1.9 2 2 2h3l2-2h8l2 2h3c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-8 3.5h-2V12H9.5v-2.5h-2v-2h2V5h2v2.5h2v2zM17.5 12c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5S18.33 12 17.5 12zm3 0c-.83 0-1.5-.67-1.5-1.5S19.67 9 20.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+    <span><span class="marca-a">V</span><span class="marca-b">HARAK</span></span>
+  </div>
+  <nav class="admin-menu">
+    <a href="/pages/admin/dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 3h8v8H3zM13 3h8v5h-8zM13 10h8v11h-8zM3 13h8v8H3z"/></svg><span>Painel</span></a>
+    <a href="/pages/admin/produtos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 7h-3V5a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2v2H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zM9 5h6v2H9z"/></svg><span>Produtos e precos</span></a>
+    <a href="/pages/admin/pedidos.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0z"/></svg><span>Pedidos</span></a>
+    <a href="/pages/admin/clientes.html" class="active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 0 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.9"/></svg><span>Clientes</span></a>
+  </nav>
+  <div class="admin-sair">
+    <button class="btn btn-secondary btn-sm" type="button" data-sair>Sair do painel</button>
+  </div>
+</aside>
+<main class="admin-conteudo" id="conteudo">
+<div class="admin-topo">
+  <div>
+    <h1>Clientes</h1>
+    <p>Contas criadas pelos clientes neste navegador.</p>
+  </div>
+  <a class="btn btn-secondary btn-sm" href="/">Ver a loja</a>
+</div>
+
+<div class="painel">
+  <div style="overflow-x:auto">
+    <table class="tabela">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>E-mail</th>
+          <th>Cadastro</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-clientes"></tbody>
+    </table>
+  </div>
+</div>
+</main>
+</div>
+<script src="/js/configuracao.js"></script>
+<script src="/js/dados-catalogo.js"></script>
+<script src="/js/precos.js"></script>
+<script src="/js/precos-local.js"></script>
+<script src="/js/auth.js"></script>
+<script src="/js/cart.js"></script>
+<script src="/js/utils.js"></script>
+<script src="/js/admin.js"></script>
+</body>
+</html>

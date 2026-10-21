@@ -1,0 +1,211 @@
+/* =========================================================================
+   VHARAK | product-detail.css
+   Pagina de detalhe do produto: fundo com a arte do jogo, cartela que
+   invade a faixa superior e, ao lado, a ficha com o preco e as acoes.
+   ========================================================================= */
+
+.produto-pagina { padding-top: var(--header-h); min-height: 100vh; }
+
+/* ---- Fundo com a arte ---------------------------------------------------- */
+.produto-fundo {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  background-color: var(--bg-secondary);
+  overflow: hidden;
+}
+/* A arte do jogo aparece desfocada e escurecida: ela cria o clima sem
+   competir com a cartela do produto. */
+.produto-fundo::before {
+  content: '';
+  position: absolute; inset: -12%;
+  background-image: var(--fundo-imagem, none);
+  background-size: cover;
+  background-position: center 30%;
+  filter: blur(42px) saturate(0.85);
+  opacity: 0.5;
+  transform: scale(1.1);
+}
+.produto-fundo::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 75%;
+  background: linear-gradient(transparent, var(--bg-primary));
+}
+.produto-fundo-sem-imagem::before { display: none; }
+
+/* ---- Cartela que invade o fundo ------------------------------------------ */
+.produto-conteudo {
+  position: relative;
+  max-width: var(--largura-nav);
+  margin: -190px auto 0;
+  padding: 0 32px;
+  z-index: 2;
+}
+
+.produto-topo {
+  display: flex; gap: 44px;
+  margin-bottom: 48px;
+  align-items: flex-start;
+}
+
+.produto-capa { flex-shrink: 0; width: 300px; }
+.produto-capa img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.6);
+  background: var(--bg-secondary);
+}
+.produto-capa.capa-console img { object-fit: contain; padding: 12px; }
+
+.produto-info { flex: 1; min-width: 0; padding-top: 60px; }
+
+.produto-tipo {
+  display: inline-block; padding: 5px 14px; border-radius: 4px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; margin-bottom: 14px;
+}
+.produto-tipo.jogo { background: var(--accent-veio); color: var(--accent); }
+.produto-tipo.console { background: rgba(74, 158, 255, 0.18); color: var(--info); }
+.produto-tipo.acessorio { background: rgba(168, 85, 247, 0.18); color: #a855f7; }
+
+.produto-nome {
+  font-size: 40px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+/* ---- Meta: genero, ano, estudio, nota -------------------------------------- */
+.produto-meta { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; align-items: center; }
+.produto-meta .meta-item {
+  padding: 5px 12px; background: rgba(255, 255, 255, 0.06);
+  border-radius: 4px; font-size: 13px; color: var(--text-secondary);
+}
+.produto-meta .meta-item.nota { color: var(--accent); font-weight: 600; }
+.produto-meta .class-badge {
+  min-width: 30px; height: 30px; padding: 0 6px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 6px; font-size: 13px; font-weight: 800;
+}
+
+/* ---- Preco ------------------------------------------------------------------ */
+.produto-preco {
+  display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+.produto-preco .valor { font-size: 34px; font-weight: 800; color: var(--text-primary); }
+.produto-preco .de { font-size: 16px; color: var(--text-muted); text-decoration: line-through; }
+.produto-preco .sem-preco { font-size: 16px; color: var(--text-muted); font-weight: 600; }
+.produto-preco-nota { font-size: 13px; color: var(--text-secondary); margin-bottom: 24px; }
+.produto-desconto {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  background: var(--danger); color: #fff; font-size: 12px; font-weight: 800;
+}
+
+/* ---- Acoes -------------------------------------------------------------------- */
+.produto-acoes {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;
+}
+.produto-acoes .btn { padding: 14px 24px; font-size: 15px; font-weight: 700; }
+.produto-acoes .btn svg { width: 18px; height: 18px; }
+
+.produto-garantias {
+  display: flex; gap: 20px; flex-wrap: wrap;
+  color: var(--text-secondary); font-size: 13px; margin-bottom: 30px;
+}
+.produto-garantias span { display: inline-flex; align-items: center; gap: 7px; }
+.produto-garantias svg { width: 15px; height: 15px; color: var(--success); }
+
+/* ---- Sinopse e ficha ---------------------------------------------------------- */
+.produto-bloco { margin-bottom: 30px; }
+.produto-bloco h2 {
+  font-size: 12px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; color: var(--text-secondary); margin-bottom: 12px;
+}
+.produto-bloco p { color: var(--text-secondary); line-height: 1.8; font-size: 15px; }
+
+.ficha { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.ficha .item .rotulo {
+  display: block; font-size: 12px; color: var(--text-muted);
+  margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.ficha .item .valor { font-size: 14px; color: var(--text-primary); }
+
+/* ---- Secoes do rodape da pagina ------------------------------------------------ */
+.produto-secao {
+  max-width: var(--largura-nav);
+  margin: 0 auto 48px;
+  padding: 0 32px;
+}
+.produto-secao > h2 {
+  font-size: 22px; font-weight: 800; letter-spacing: -0.3px; margin-bottom: 20px;
+}
+
+/* ---- Avaliacoes ----------------------------------------------------------------- */
+.avaliacao-form {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); padding: 22px; margin-bottom: 24px;
+}
+.avaliacao-form h3 { font-size: 15px; margin-bottom: 14px; }
+.estrelas { display: flex; gap: 6px; margin-bottom: 14px; }
+.estrelas button {
+  background: none; padding: 2px; font-size: 28px; line-height: 1;
+  color: var(--text-muted); transition: color 0.15s ease;
+}
+.estrelas button.lit { color: var(--accent); }
+.estrelas button:hover { color: var(--accent-hover); }
+
+.lista-avaliacoes { display: flex; flex-direction: column; gap: 14px; }
+.avaliacao {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius-md); padding: 18px 20px;
+}
+.avaliacao .topo { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.avaliacao .nome { font-weight: 600; font-size: 14px; }
+.avaliacao .nota { color: var(--accent); font-size: 13px; font-weight: 600; }
+.avaliacao .quando { color: var(--text-muted); font-size: 12px; margin-left: auto; }
+.avaliacao .texto { color: var(--text-secondary); font-size: 14px; line-height: 1.7; }
+
+/* ---- Versoes (accordion) --------------------------------------------------------- */
+.versoes { border: 1px solid var(--border); border-radius: var(--radius-md); overflow: hidden; }
+.versao { border-bottom: 1px solid var(--border); }
+.versao:last-child { border-bottom: none; }
+.versao-cabecalho {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 16px 20px; background: var(--bg-card); cursor: pointer;
+  transition: var(--transition); width: 100%; text-align: left;
+}
+.versao-cabecalho:hover { background: var(--bg-card-hover); }
+.versao-nome { font-weight: 600; font-size: 15px; }
+.versao-detalhe { color: var(--text-secondary); font-size: 13px; }
+.versao-preco { color: var(--accent); font-weight: 700; font-size: 15px; }
+.versao-seta { transition: transform 0.25s ease; color: var(--text-muted); }
+.versao.aberta .versao-seta { transform: rotate(180deg); }
+.versao-conteudo {
+  display: none; padding: 16px 20px; background: var(--bg-secondary);
+  color: var(--text-secondary); font-size: 14px; line-height: 1.7;
+}
+.versao.aberta .versao-conteudo { display: block; }
+
+/* ---- Estado vazio (produto inexistente) --------------------------------------------- */
+.produto-inexistente {
+  max-width: 620px; margin: 0 auto; padding: 90px 24px; text-align: center;
+}
+.produto-inexistente h1 { font-size: 28px; margin-bottom: 12px; }
+.produto-inexistente p { color: var(--text-secondary); margin-bottom: 24px; }
+
+@media (max-width: 900px) {
+  .produto-topo { flex-direction: column; gap: 28px; }
+  .produto-capa { width: 220px; }
+  .produto-info { padding-top: 0; }
+  .produto-nome { font-size: 28px; }
+  .produto-preco .valor { font-size: 28px; }
+  .ficha { grid-template-columns: 1fr 1fr; }
+  .produto-conteudo { margin-top: -80px; padding: 0 16px; }
+  .produto-secao { padding: 0 16px; }
+  .produto-fundo { height: 280px; }
+}
+@media (max-width: 560px) {
+  .ficha { grid-template-columns: 1fr; }
+  .produto-acoes .btn { flex: 1 1 100%; }
+}

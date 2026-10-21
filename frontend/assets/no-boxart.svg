@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400" role="img" aria-label="Imagem nao disponivel">
+  <rect width="300" height="400" fill="#141414"/>
+  <g transform="translate(114 168) scale(3)" fill="none" stroke="#333" stroke-width="1.2">
+    <path d="M21 6H3C1.9 6 1 6.9 1 8v8c0 1.1.9 2 2 2h3l2-2h8l2 2h3c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"/>
+    <path d="M9 9.5v5M6.5 12h5"/>
+    <circle cx="16.5" cy="11" r="1.2"/>
+    <circle cx="19.5" cy="13.5" r="1.2"/>
+  </g>
+  <text x="150" y="250" fill="#555" font-family="Inter, Segoe UI, sans-serif" font-size="15" font-weight="600" text-anchor="middle" letter-spacing="1">SEM IMAGEM</text>
+</svg>

@@ -1,0 +1,36 @@
+<!-- titulo: Entrar no painel   -->
+<!-- descricao: Acesso ao painel local da VHARAK.   -->
+<!-- css: global, admin, auth -->
+
+<div class="admin-login">
+  <div class="auth-caixa">
+
+    <div class="auth-logo">
+      <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21 6H3C1.9 6 1 6.9 1 8v8c0 1.1.9 2 2 2h3l2-2h8l2 2h3c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-8 3.5h-2V12H9.5v-2.5h-2v-2h2V5h2v2.5h2v2zM17.5 12c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5S18.33 12 17.5 12zm3 0c-.83 0-1.5-.67-1.5-1.5S19.67 9 20.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+      <span><span class="marca-a">V</span><span class="marca-b">HARAK</span></span>
+    </div>
+
+    <h1>Painel da loja</h1>
+    <p class="subtitulo">Área de administração local da VHARAK.</p>
+
+    <form id="formulario-admin" novalidate>
+      <div class="form-group">
+        <label for="senha-admin">Senha do painel</label>
+        <input type="password" id="senha-admin" name="senha" autocomplete="current-password" required placeholder="Senha">
+      </div>
+
+      <p class="form-error" id="erro-admin" hidden></p>
+
+      <button class="btn btn-primary btn-lg" type="submit">Entrar</button>
+    </form>
+
+    <div class="auth-rodape">
+      <a href="/">Voltar para a loja</a>
+    </div>
+
+    <div class="auth-extra">
+      Este painel roda no seu navegador. A senha protege os dados guardados neste dispositivo, não a loja.
+    </div>
+
+  </div>
+</div>

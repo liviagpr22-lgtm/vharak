@@ -1,0 +1,175 @@
+/* =========================================================================
+   VHARAK | product-card.css
+   O card de produto. E o componente que aparece em toda grade da loja,
+   entao ele carrega a assinatura visual do site: a capa e a unica coisa
+   realmente saturada na tela, a informacao fica abaixo, e nada se
+   sobrepoe a imagem.
+
+   Sem overlay escuro e sem botao sobre a capa: os tres selos nos cantos
+   sao a unica coisa que flutua sobre a imagem.
+   ========================================================================= */
+
+.card-produto {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: var(--transition);
+}
+.card-produto:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ---- Capa --------------------------------------------------------------- */
+.card-produto .capa {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+.card-produto .capa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.card-produto:hover .capa img { transform: scale(1.05); }
+
+/* As fotos de console sao paisagem: em vez de cortar a imagem, ela
+   cabe inteira dentro da caixa, como foto de produto. O contorno marca a
+   borda da foto -- algumas vem com fundo branco. */
+.card-produto .capa-console img {
+  object-fit: contain;
+  padding: 14px;
+  background: var(--bg-secondary);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.07);
+}
+
+/* ---- Selos nos cantos ---------------------------------------------------- */
+.card-produto .badge-tipo {
+  position: absolute;
+  top: 10px; left: 10px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  backdrop-filter: blur(8px);
+}
+.card-produto .badge-tipo.jogo { background: rgba(224, 179, 74, 0.92); color: var(--accent-texto); }
+.card-produto .badge-tipo.console { background: rgba(74, 158, 255, 0.92); color: #fff; }
+.card-produto .badge-tipo.acessorio { background: rgba(168, 85, 247, 0.92); color: #fff; }
+
+.card-produto .badge-class {
+  position: absolute;
+  top: 10px; right: 10px;
+  min-width: 30px; height: 30px; padding: 0 6px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 6px;
+  font-size: 13px; font-weight: 800;
+  backdrop-filter: blur(8px);
+}
+.card-produto .badge-class[style*="var(--class-18-fundo)"] { border: 1px solid rgba(255, 255, 255, 0.6); }
+
+.card-produto .badge-desconto {
+  position: absolute;
+  bottom: 10px; left: 10px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--danger); color: #fff;
+  font-size: 11px; font-weight: 800;
+  letter-spacing: 0.5px;
+  backdrop-filter: blur(8px);
+}
+
+/* ---- Corpo -------------------------------------------------------------- */
+.card-produto .corpo {
+  padding: 14px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-produto .corpo h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.9em;
+}
+.card-produto .corpo h3 a::after {
+  /* Area esticada: o card inteiro vira clicavel, mas o botao de compra
+     continua por cima porque tem posicao relativa. */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.card-produto .corpo h3 a:hover { color: var(--accent); }
+
+.card-produto .meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.45;
+}
+
+/* ---- Etiquetas ---------------------------------------------------------- */
+.card-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.mini-tag {
+  font-size: 10px; font-weight: 800; letter-spacing: 0.5px;
+  padding: 3px 8px; border-radius: 4px; text-transform: uppercase;
+}
+.mini-tag.tag-novo { background: rgba(70, 211, 105, 0.16); color: var(--success); }
+.mini-tag.tag-vendido { background: var(--accent-veio); color: var(--accent); }
+.mini-tag.tag-nota { background: rgba(255, 255, 255, 0.07); color: var(--accent); }
+
+/* ---- Preco -------------------------------------------------------------- */
+.card-produto .precos {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+.card-produto .precos .valor {
+  font-size: 16px; font-weight: 800; color: var(--text-primary);
+}
+.card-produto .precos .de {
+  font-size: 12px; color: var(--text-muted); text-decoration: line-through;
+}
+.card-produto .precos .sem-preco {
+  font-size: 13px; font-weight: 600; color: var(--text-muted);
+}
+.card-produto .precos.preco-a-anunciar { padding-top: 2px; }
+
+/* ---- Acoes --------------------------------------------------------------- */
+.card-produto .acoes {
+  display: flex;
+  gap: 8px;
+  padding: 0 14px 14px;
+  position: relative;
+  z-index: 2;
+}
+.card-produto .acoes .btn { flex: 1; }
+.card-produto .acoes .btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+.card-produto .acoes .acoes-zap { flex: 0 0 auto; padding: 6px 12px; }
+
+@media (max-width: 768px) {
+  .card-produto .acoes .btn { min-height: 40px; font-size: 12px; }
+  .card-produto .corpo h3 { font-size: 14px; }
+  .card-produto .corpo { padding: 12px; }
+  .card-produto .acoes { padding: 0 12px 12px; }
+}

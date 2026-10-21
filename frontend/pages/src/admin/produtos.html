@@ -1,0 +1,72 @@
+<!-- titulo: Produtos e preços   -->
+<!-- descricao: Gestao de preços e publicacao do catálogo da VHARAK.   -->
+<!-- ativo: produtos -->
+<!-- css: global, admin -->
+
+<div class="admin-topo">
+  <div>
+    <h1>Produtos e preços</h1>
+    <p>Preencha o preço de venda e, se quiser, o preço cheio para o desconto.</p>
+  </div>
+  <div style="display:flex;gap:10px;flex-wrap:wrap">
+    <button class="btn btn-secondary btn-sm" type="button" onclick="window.location.reload()">Descartar alterações</button>
+    <button class="btn btn-primary btn-sm" type="button" id="exportar-precos">Exportar preços.js</button>
+  </div>
+</div>
+
+<div class="painel" style="margin-bottom:20px">
+  <div class="painel-topo">
+    <h2>Colar lista de preços</h2>
+    <button class="btn btn-secondary btn-sm" type="button" id="baixar-modelo">Baixar modelo em branco</button>
+  </div>
+  <div style="padding:22px">
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.7;margin-bottom:14px">
+      Cole aqui a lista de preços, uma linha por produto. O separador pode ser ponto e virgula,
+      tabulação, barra ou dois espacos — a virgula não separa, porque ela e o decimal brasileiro.
+      Aceita o <strong>id</strong> ou o <strong>nome</strong> do produto. O preço pode vir como
+      <code>299,90</code>, <code>299.90</code> ou <code>R$ 299,90</code>.
+    </p>
+    <pre style="background:var(--bg-secondary);border:1px solid var(--border);border-radius:6px;padding:14px;font-family:var(--fonte-mono,Consolas,monospace);font-size:12px;color:var(--text-secondary);overflow-x:auto;margin:0 0 16px">ps-elden-ring; 299,90; 399,90
+Elden Ring; 299,90
+God of War Ragnarök; R$ 249,90</pre>
+
+    <div class="form-group" style="margin-bottom:14px">
+      <label for="lista-precos">Sua lista</label>
+      <textarea id="lista-precos" rows="6" placeholder="ps-elden-ring; 299,90; 399,90"></textarea>
+    </div>
+
+    <button class="btn btn-primary" type="button" id="aplicar-lista">Aplicar lista</button>
+
+    <div id="resultado-lista" style="margin-top:16px"></div>
+  </div>
+</div>
+
+<div class="painel">
+  <div class="painel-topo">
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+      <input type="search" id="busca-produtos" placeholder="Buscar produto..." aria-label="Buscar produto"
+             style="padding:9px 14px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:6px;color:var(--text-primary);font-size:13px;min-width:220px">
+      <select id="filtro-produtos" aria-label="Filtrar por tipo"
+              style="padding:9px 14px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:6px;color:var(--text-primary);font-size:13px">
+        <option value="">Jogos e consoles</option>
+        <option value="jogo">Somente jogos</option>
+        <option value="console">Somente consoles</option>
+      </select>
+    </div>
+    <p style="font-size:12px;color:var(--text-muted)">Preços em centavos: 29990 = R$ 299,90</p>
+  </div>
+
+  <div style="overflow-x:auto">
+    <table class="tabela">
+      <thead>
+        <tr>
+          <th>Produto</th>
+          <th>Tipo</th>
+          <th>Marca</th>
+          <th>Preço de venda / preço cheio</th>
+        </tr>
+      </thead>
+      <tbody id="tabela-produtos"></tbody>
+    </table>
+  </div>
+</div>

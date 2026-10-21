@@ -1,0 +1,63 @@
+<!-- titulo: Catálogo de jogos e consoles | VHARAK   -->
+<!-- descricao: 105 jogos e 23 consoles de PlayStation, Xbox e Nintendo. Filtre por gênero, classificação indicativa e plataforma.   -->
+<!-- ativo: jogos -->
+<!-- css: global, header, footer, product-card, catalog -->
+<!-- js: catalog -->
+
+<main class="main-content">
+<div class="catalogo">
+
+    <div class="catalogo-topo">
+      <div>
+        <h1 class="page-title">Catálogo</h1>
+        <p>105 jogos e 23 consoles de PlayStation, Xbox e Nintendo.</p>
+      </div>
+      <div class="ordenacao">
+        <label for="seletor-ordem">Ordenar</label>
+        <select id="seletor-ordem"></select>
+      </div>
+    </div>
+
+    <div class="abas" role="tablist" aria-label="Tipo de produto">
+      <button type="button" class="aba" data-aba="" role="tab" aria-selected="true">Todos</button>
+      <button type="button" class="aba" data-aba="jogo" role="tab" aria-selected="false">Jogos</button>
+      <button type="button" class="aba" data-aba="console" role="tab" aria-selected="false">Consoles</button>
+    </div>
+
+    <form class="busca-catalogo" id="formulario-busca" role="search">
+      <label class="visualmente-oculto" for="campo-busca">Buscar no catálogo</label>
+      <input type="search" id="campo-busca" name="q" placeholder="Buscar por título, gênero, estudio ou plataforma..." autocomplete="off">
+      <button class="btn btn-primary" type="submit">Buscar</button>
+    </form>
+
+    <div class="linha-filtro">
+      <span class="rotulo">Gênero</span>
+      <div class="grupo-filtro" id="filtro-genero"></div>
+    </div>
+
+    <div class="linha-filtro">
+      <span class="rotulo">Plataforma</span>
+      <div class="grupo-filtro" id="filtro-fabricante"></div>
+    </div>
+
+    <div class="linha-filtro">
+      <span class="rotulo">Classificação</span>
+      <div class="grupo-filtro" id="filtro-classificacao"></div>
+    </div>
+
+    <div class="linha-filtro">
+      <button type="button" class="limpar-filtros" id="limpar-filtros">Limpar todos os filtros</button>
+    </div>
+
+    <p class="resultado-contador" id="contador-resultados"></p>
+
+    <div class="grid-produtos" id="grade-catalogo"></div>
+
+    <div class="empty-state" id="estado-vazio" hidden>
+      <h3>Nenhum produto encontrado</h3>
+      <p>Ajuste os filtros ou busca por outro termo.</p>
+      <button class="btn btn-outline" type="button" onclick="document.getElementById('limpar-filtros').click()">Limpar filtros</button>
+    </div>
+
+  </div>
+</main>
