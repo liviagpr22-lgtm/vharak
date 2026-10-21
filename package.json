@@ -1,0 +1,23 @@
+{
+  "name": "vharak",
+  "version": "1.0.0",
+  "private": true,
+  "description": "VHARAK - Loja de jogos e consoles. HTML, CSS e JavaScript puro, sem framework e sem build.",
+  "scripts": {
+    "build": "node tools/gerar-paginas.js",
+    "dev": "node tools/servidor.js 8000",
+    "verificar": "node tools/verificar.js",
+    "verificar:paginas": "node tools/verificar-paginas.js",
+    "verificar:encoding": "node tools/checar-codificacao.js",
+    "testar": "node tools/testar-catalogo.js",
+    "testar:painel": "node tools/testar-painel.js",
+    "pingar": "node tools/pingar.js",
+    "precos": "node tools/gerar-precos-placeholder.js",
+    "precos:modelo": "node tools/gerar-precos.js",
+    "seo": "node tools/gerar-seo.js",
+    "acentuar": "node tools/acentuar-html.js && node tools/acentuar-js.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
